@@ -1,3 +1,11 @@
+/*
+ * jQuery Tab Nav
+ *
+ * Copyright 2012 Christopher Trudeau
+ * https://github.com/cltrudeau/jquery-tab-nav
+ * MIT License
+ */
+
 (function( $ ) {
     var methods = {
         init:function( options ) {
