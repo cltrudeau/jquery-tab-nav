@@ -1,5 +1,4 @@
-/*
- * jQuery Tab Nav
+/* jQuery Tab Nav
  *
  * Copyright 2012 Christopher Trudeau
  * https://github.com/cltrudeau/jquery-tab-nav
@@ -7,6 +6,7 @@
  */
 
 (function( $ ) {
+    var SELECTED = 'ct-tabs-selected ui-state-active';
     var methods = {
         init:function( options ) {
             return this.each(function() {
@@ -21,11 +21,18 @@
         },
         select:function( choice ) {
             return this.each(function() {
-                var selected = 'ct-tabs-selected ui-state-active';
                 $(this).find('li #ct-tabs-selected').each(function(){
-                    $(this).removeClass(selected)
+                    $(this).removeClass(SELECTED)
                 });
-                $(this).find('li').eq(choice).addClass(selected);
+                $(this).find('li').eq(choice).addClass(SELECTED);
+            });
+        },
+        select_by_id:function( choice ) {
+            return this.each(function() {
+                $(this).find('li #ct-tabs-selected').each(function(){
+                    $(this).removeClass(SELECTED)
+                });
+                $(this).find('li#' + choice).addClass(SELECTED);
             });
         }
     };

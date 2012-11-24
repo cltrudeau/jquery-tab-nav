@@ -2,7 +2,7 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-    <title>Page One</title>
+    <title>Page Three</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <script type="text/JavaScript"
         src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js">
@@ -19,7 +19,7 @@
     <script type="text/JavaScript">
         $(document).ready(function(){
             $('#navbar').tabnav();
-            $('#navbar').tabnav('select', 0);
+            $('#navbar').tabnav('select_by_id', 'three');
         });
     </script>
 </head>
@@ -34,7 +34,7 @@
     </div>
 
     <!-- content -->
-    <h1> Page One </h1>
-    <p> A most excellent first page. Selected by number.</p>
+    <h1> Page Three </h1>
+    <p> A most excellent third page. Selected by id.</p>
 </body>
 </html>
